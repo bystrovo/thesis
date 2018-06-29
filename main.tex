@@ -4,6 +4,14 @@
 \usepackage{amsthm, amsmath, amssymb}
 \usepackage{setspace}\onehalfspacing
 \usepackage[loose,nice]{units} %replace "nice" by "ugly" for units in upright fractions
+\usepackage{graphicx}
+\usepackage{color}
+
+% Use “\cite{NEEDED}” to get Wikipedia-style “citation needed” in document
+\usepackage{ifthen}
+\let\oldcite=\cite
+\renewcommand\cite[1]{\ifthenelse{\equal{#1}{NEEDED}}{\textcolor{red}{\ensuremath{^\texttt{[citation~needed]}}}}{\oldcite{#1}}}
+ 
  
 \title{E-learning performance optimization with emotion-based visual learner feedback}
 \author{Oleg Bystrov, Humboldt Universitaet zu Berlin}
@@ -11,7 +19,11 @@
  
 \begin{document}
 \maketitle
- 
+
+\input{concept2.tex}
+
+\clearpage
+
 \input{body.tex}
 
 \bibliographystyle{plain}
