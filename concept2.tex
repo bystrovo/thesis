@@ -2,66 +2,146 @@
 
 \pagebreak
 
-\section {Using emotionally adaptive interface to influence performance of e-learning sessions}
 
+\section{Background}
 
-\subsection{Problem description}
+In the context of an e-learning environment each learner is subject to an emotional state that they experience during a learning session. 
+The state can potentially and typically is expected to change over time. 
+It is influenced by a range of factors and stimuli, both internal and external. 
+This affects their performance and the overall effectiveness of a learning session.
+E-learning providers aim to help users learn in as quick and effective way as possible. 
+They are keen on optimizing learning sessions for greater effectiveness. 
+There is a potential when using information about learner's emotional or physical state, as we can incorporate that data into lessons to provide the learner with a more appropriate task or interface. 
+Ultimately this can lead to a better experience and effectiveness of the e-learning experience.
 
-In the context of an e-learning environment the learner is subject to their personal emotional state which could potentially change over time. This affects their performance and the overall effectiveness of a learning session. (citation needed). E-learning aims to help users learn about subjects in a quick and effective way. Information about a users emotional and physical state can be incorporated into lessons to provide the user with a more appropriate task or interface.
+\section{Goals and motivation}
 
-\subsection{Goals of the paper}
+Goal of the paper is to examine a relation between emotional aspect of a user interface in an e-learning system and its effect on performance of the learner.
 
-Depending on the task, most beneficial emotional states of the learner are high-arousal positive-valence (upbeat) and low-arousal negative valence (calm, serious) \cite{NEEDED}
-Some tasks require one, some the other. (elaborate)
-My assumption is that, knowing the nature of the task and the optimal emotional state, we can transition the learner into a more adequate mood that as a result would allow more efficient learning.
+Several studies have been administered to examine emotional state and cognitive ability.  
+These present results on interdependency of these 2 variables. \citationneeded
 
-I would like to explore how performance and engagement on a certain task is dependent on their mood and the presented interface.
-Furthermore to evaluate whether UI and UX techniques could be leveraged to influence these two variables.
+In a similar fashion there are studies providing evidence that our surrounding environment has an influence on our emotions. \cite{Johnson2000, Arockiam2013}
+Forms, shapes colors, and overall experience of an interaction or interface leads to an emotional reaction \cite{Bertamini2013}.
+The field of 'Emotional Design' studies causes and effects of this relationship.
+
+-----
+
+Logically, having a transitive relation, we can argue that exposure to several interfaces with different emotional capacities within e-learning sessions should lead to a change in attention and cognition, which should ultimately lead to a change in performance of the user.
+Insufficient research confirming this connection has been published yet.
+
+In this paper I would like to explore how memory, attention and cognition on selected tasks are dependent on the initial mood and presented interface during a hypothetical e-learning lesson. 
+I will evaluate to which extent it is possible to transfer or keep the learner in a beneficial emotional state and which UI and UX techniques could be leveraged to achieve this goal.
 
 %- test if 2 different interfaces (oriented for positive valence (colorful,joyful) and negative valence(strict, b/w) ) and 2 different moods (pos and neg) lead to different performance on a task. Condition the user to a mood before presenting with the task.
 
-\subsection{Approach and methods}
+\section{Background}
 
-With the help of body and environment trackers we can gather data about the learner and with some certainty algorithmically predict their emotional state. Another approach would be to ask the user for their current state. Both could be combined to enhance the prediction and tailor it for each particular user. Each user is individual, so this additional verification step can be useful to train the algorithm to the user.
+A common representations of emotional affect is with the help of a two-dimensional model with a "valence" axis and an "arousal" axis.
+Some evidence exists stating that the most beneficial emotional states for memory are high-arousal positive-valence (upbeat) and low-arousal negative valence (calm, serious) \cite[p.~10]{Greene2010}. Positive affect enhances problem solving abilities and a range of other factors \cite{Isen2001}, and high arousal positive valence increase working memory performance \cite{Gabana2017}.
+A study \cite{Baldwin2017} involving music found that preconditioning with positive valence music has had beneficial effects on sustained attention in their test subjects.
+It could be argued that a certain composition of valence and arousal is more optimal than another, depending on the nature of the task.
 
-I would like to form a study of task performance depending on 2 variables:
+
+My assumption is that, knowing about the task and the corresponding optimal emotional state, we can transition the learner into a more adequate mood. As a result, that would enable more efficient learning.
+
+\section{Approach and methods}
+
+\subsection{Study Design}
+
+I propose a study design that takes 4 groups of people, each group in one of the following states:
+
 \begin{itemize}
-	\item Interface version (2 versions)
-	\item Target Mood (2 moods: negative valence, low arousal; positive valence, high arousal)
+	\item \textbf{Group1}: Positive valence / high arousal
+	\item \textbf{Group2}: Negative valence / high arousal
+	\item \textbf{Group3}: Positive valence / low arousal
+	\item \textbf{Group4}: Negative valence / low arousal
 \end{itemize}
+
+Each test user would be preconditioned with help of audio-visual materials to be in one of 4 groups. 
+Studies \citationneeded propose effective means to achieve this.
+
+A short questionnaire (emotional awareness) will be used to validate, that preconditioning has had sufficient and expected effect on the subject.
+
+A prepared task sequence (\ref{task_sequence}) will focus on testing short-term memory and creative/analytical problems. 
+All groups would be presented with the same tasks but packed in 1 of 2 different interfaces.
+
+50\% of each group would be presented with a task-set through Interface0 and 50\% would complete the tasks through Interface1.
+
+\begin{itemize}
+	\item \textbf{Inteface 0:} Default interface with low emotional capacity and standard language
+	\item \textbf{Inteface 1:} Optimized interface with elements tailored for high arousal and positive valence emotion (potentially optimal for both memory and analytical tasks)
+\end{itemize}
+
+Both interface versions would provide equal usability features and should differentiate exclusively in emotional charge of its visual parameters.
+
+After completing all tasks the subject will again answer the "emotional awareness" questionnaire to evaluate how their emotional state has changed to the previously recorded one, taken before the task
+
+Effectively the study will build 8 groups of people (with both male and female subjects in each group).
+It is my goal to have each testing sequence to be completed within 20 minutes time to keep the testing subjects' time investment low.
+Statistical analysis will show whether differences in performance between groups could be observed. 
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{images/study_design.png}
+		\includegraphics[width=1\textwidth]{images/study_design2.png}
 		\caption{Study design\label{fig:scaled_diss}}
 	\end{center}
 \end{figure}
 
+\subsection{Measuring performance} \label{measuring}
 
+During each task several parameters will be recorded for each subject to create a comprehensive task performance metric. 
+Examples include: rate of clicks per minute, mouse movements, rate of correct answers and time elapsed until completion can be measured. 
 
-First, I am planning to perform a quantitative analysis. Here a user would be presented with a choice of 2 interfaces and would perform the same task on both of them. Their mood shall be determined through a short questionnaire.
-This would provide information if the same task can be accomplished more effectively with one of the provided interfaces. Both interface versions would provide the same usability features and should differentiate solely in the visual parameters that affect emotion (like use for color and language).
+Mouse movement and video recordings could allow further qualitative analysis and provide room for more insight.
 
-Further we might need to test if the same task is performed differently by the same user with the same interface but in two different moods. For this I would plan a more qualitative analysis with less test subjects and use preconditioning techniques to steer the user in a certain mood (video session, exercise session, different time of day). Their would perform the task on the same interface at two different points of time.
+\subsection{Task Sequence} \label{task_sequence}
 
-\subsubsection{Task}
+Psychological and cognitive studies have developed a variety of tests evaluating abilities of human mind. 
+They differ in the art of activity and their focus, for example some concentrate on memory, creative thinking, analytical thinking, solving mathematical problems, imagination or orientation capabilities.
 
-Tasks can be different in nature, some of them require different mood states for optimal performance than others. The task for the study should be chosen carefully and based on previous studies proven to be best oriented for a specific mood.
+For this study I found several potentially fitting tests:
 
-Possibly find a standardized test to use (proven best for a certain kind of valence/arousal state)
+- \textbf{a classic memory game}. The goal is to find all pairs of images on a raster of (ex. 10 by 10) tiles. 
+Only 2 pieces can be turned over at once. 
+After which the turn back around and another try of finding a pair starts. 
+The limitation of this game in the context of this study is that there is some degree of luck/chance involved in choosing correct tiles. 
+To minimize it we could show all cards to the user for some seconds at the beginning of the game.
+Expanding the field to more tiles would also reduce the chance influence in the beginning of the game, growing steadily towards the end.
+It is possible to count only some amount of correct choices at the beginning of the game for evaluation and discard the ones that are turned over at the end of the game.
+Another possible way to reduce chance behavior is to tag each tile if it has been turned over at least once. If it has then we could assume the player to have remembered the tile, otherwise count the tile choice as random chance choice and no count this move towards final evaluation of performance
 
-\subsubsection{Measuring performance}
+- \textbf{Remote Associates Test}. Originally published by \cite[p.226 ff]{Mednick1962}, this test evaluates individual creativity. 
+The test subject is presented with a set of 3 words and they must find a fourth word that is in some way connected to all three presented words.
+This test is quite robust, yet for definitive results might require up to 40 minutes of testing time.
 
-Performance can be measured in time spent, successful rate, mistakes per session etc.
+\subsection{Evaluation}
 
-\subsubsection{Interface}
+With quantitative analysis a more conclusive finding with significant results can be achieved with a larger amount of subjects participating in the study. 
+Therefore the more I can get for this study - the better. 
+I except that there will be at least 15 subjects per group (15 * 8 = 120 ) required.
+To simplify acquisition of test subjects I will create a testing framework in the form of a web-application (See section \ref{implementation}), runnable on any browser.
+With this uncontrolled approach to conducting the test there is a risk of noise within the testing environment (distractions and surrounding interference) and deliberately false answers skewing results.
 
-Finding an interface that "fits" an emotion and supports it, as opposed to a neutral interface.
+\section{Implementation} \label{implementation}
 
-\subsubsection{Further thoughts}
-Discuss viability of real-time or in-between-session measurement of mood to adjust interface taking in consideration the possibilities of current algorithms within LISA projects
+To facilitate the study I will build a web application (based on reactjs), runnable on desktop and tablet devices. Data emitted from the application will be saved in a remote database (mongodb) for the purposes of evaluation.
 
-\section{Implementation}
+Every subject would be presented with one of 4 preconditioning sequences and one of 2 interfaces on a semi-random basis.
 
-\section{Analysis}
+No information should be stored locally on the device after finishing a session.
 
+\section{Implications of the study}
+
+If this study can demonstrate a significant difference in performance across groups, we can conclude that emotional features of digital user interface can have a noticeable impact on the way people consume information, memorize and analyze problems.
+It will pave the way for further studies being done exactly which aspects of an interface have the biggest impact and how to design for sustained attention and performance.
+
+E-learning providers can use these findings to better structure their online lessons and invest in design that supports the learner.
+
+Further these findings can be adapted and generalized to make use of within other applications in software, digital media and similar outlets.
+
+\section{Ethical, legal and social considerations}
+
+Conducting this research will require several subjects' actions to be recorded and stored for evaluation purposes.
+Anonymized, semi-personal (gender, age) as well as some sensitive information (video recording, with users consent) could be transferred to a server and saved for the duration of the study.
+After the study, all sensitive and personally identifiable data will be removed and aggregated to facilitate anonymity.

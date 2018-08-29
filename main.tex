@@ -6,19 +6,37 @@
 \usepackage[loose,nice]{units} %replace "nice" by "ugly" for units in upright fractions
 \usepackage{graphicx}
 \usepackage{color}
+\usepackage{hyperref}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+
 
 % Use “\cite{NEEDED}” to get Wikipedia-style “citation needed” in document
-\usepackage{ifthen}
-\let\oldcite=\cite
-\renewcommand\cite[1]{\ifthenelse{\equal{#1}{NEEDED}}{\textcolor{red}{\ensuremath{^\texttt{[citation~needed]}}}}{\oldcite{#1}}}
+%\usepackage{ifthen}
+%\let\oldcite=\cite
+%\renewcommand{\cite}[2]{\ifthenelse{\equal{#2}{NEEDED}}{\textcolor{red}{\ensuremath{^\texttt{[citation~needed]}}}}{\oldcite{#1}{#2}}}
+
+\newcommand{\citationneeded}{\textsuperscript{\color{red} [citation needed]}}
  
  
-\title{E-learning performance optimization with emotion-based visual learner feedback}
+\title{E-learning performance optimization with emotionally-aware visual interface}
+% Viability of an emotionally-aware interface within e-learning to optimize performance
 \author{Oleg Bystrov, Humboldt Universitaet zu Berlin}
 \date{2018}
  
 \begin{document}
 \maketitle
+
+\tableofcontents
+
 
 \input{concept2.tex}
 
