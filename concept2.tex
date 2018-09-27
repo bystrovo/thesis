@@ -7,7 +7,7 @@
 E-learning providers are looking to improve the learning experience of their users and make progress as effective as possible. 
 During a usual learning session each learner is subject to a range of volatile emotional states that help or hinder their learning success. 
 A range of factors and stimuli, both internal and external, can influence emotions. 
-When we take this knowledge about emotions into account a new way to manage a learning session opens. We can incorporate this knowledge into learning sessions and provide a more appropriate task or interface for the learner.
+When we take this knowledge about emotions into account a new way to manage a learning session opens. We can incorporate this knowledge into learning sessions and provide a more appropriate task and/or interface for the learner.
 
 The goal of the paper is to examine a relation between emotional aspect of a user interface in an e-learning system and its effect on performance of the learner.
 
@@ -35,6 +35,7 @@ Ethical, legal and social considerations are also part of my thesis.
 I propose a study that challenges human short-term memory, attention and creativity in a set of tasks. I will create a hypothetical learning environment that presents one set of activities in 2 different interfaces, intending to evoke different emotions from the user. In a blind study each subject will be assigned one of the interfaces and complete provided tasks (further described below).
 
 Two fundamental questions to be answered:
+
 \begin{itemize}
 	\item Have these 2 interfaces achieved the expected emotional response?
 	\item Did the results of the task vary between interfaces, as expected in accordance to the emotional response
@@ -52,35 +53,36 @@ Two fundamental questions to be answered:
 
 A usual way to represent an emotional state is through 2 attributes: arousal and valence. Arousal can range from 0 (low) to 1 (high) and valence from -1 (negative) to 1 (positive) (See figure \ref{fig:valence-arousal}). 
 
-\textbf{1. Preconditioning:} At the beginning of the experiment each test user is preconditioned with the help of visual materials to be in one of 4 states:
+\textbf{1. Preconditioning:} Each test user is preconditioned to be in one of 4 states:
  \textbf{1}: Positive valence / high arousal; 
  \textbf{2}: Negative valence / high arousal;
  \textbf{3}: Positive valence / low arousal;
  \textbf{4}: Negative valence / low arousal;
 
-Studies \citationneeded propose effective sets of emotional materials to achieve this.
+One of effective sets of emotional materials is provided by the IAPS - International Affective Picture System. The system has been in developement since 1997 \cite{Lang1997} It consists of a set of images, each with an assigned arousal and valence values. With the help these materials it is possible to cause an emotional reaction from the test subject.
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=1\textwidth]{images/study_design3.png}
+		\includegraphics[width=1\textwidth]{images/study_design5.png}
 		\caption{Study design\label{fig:scaled_diss}}
 	\end{center}
 \end{figure}
 
-\textbf{2. Validation:} A short emotional self-awareness questionnaire will be used to validate, whether pre-conditioning has had sufficient and expected effect on the subject.
+\textbf{2. Validation:} A short emotional self-awareness questionnaire will be used to validate, whether preconditioning has had sufficient and expected effect on the subject.
 
 \textbf{3. Tasks:} A prepared task sequence (\ref{task_sequence}) will focus on testing short-term memory and creative/analytical problems. 
 50\% of each group are presented with a task-set through Interface0 and 50\% would complete the tasks through Interface1.
 
 \begin{itemize}
-	\item \textbf{Inteface 0 (I0):} Default interface with low emotional capacity
-	\item \textbf{Inteface 1 (I1):} Optimized interface with elements tailored for high arousal and positive valence (potentially optimal for both memory and analytical tasks) \citationneeded
+	\item \textbf{Interface 0 (I0):} Default interface with low emotional capacity
+	\item \textbf{Interface 1 (I1):} Optimized interface with elements tailored for high arousal and positive valence (potentially optimal for both memory and analytical tasks) \cite[pp. 81 ff]{Brave2002} \cite{Heidig2015}
 \end{itemize}
 
 Both interface versions would provide equal usability features. 
-The difference is in the emotional charge which stems from \underline{language used}, \underline{forms and shapes}, \underline{colors} \citationneeded and potentially an emotional image.
+The difference is in the emotional charge which stems from \underline{language used} \cite{Citron2014}, \underline{forms and shapes} \cite{Larson2012, Bertamini2013, Plass2014, Lu2012}, \underline{colors} \cite{Valdez1994, Tekirdag2015, Ou2004} \cite[p.84]{Brave2002}, and \underline{alignment} \cite{Bertamini2013} and potentially an emotional image.
 
-\textbf{4. Revalidation:} After completing all tasks the subject will repeatedly fill out the questionnaire from step 2 to capture any changes to their emotion, caused by the interface and task.
+\textbf{4. Revalidation:} After completing all tasks the subject will repeatedly fill out the questionnaire from step 2 to capture any changes to their emotion, caused by the interface and task. The resulting value is a vector representation of previous state and current state.
+\vspace{4mm} %5mm vertical space
 
 Effectively the study will divide subjects into 8 groups. 
 It is my goal to have each testing sequence completed within about 20 minutes time to keep the subjects' time investment low.
@@ -110,14 +112,14 @@ The test subject is presented with a set of 3 words and they must find a fourth 
 
 Usually a quantitative analysis can yield better results with a larger number of subjects.
 I expect to attain a minimum of 15 subjects per group (15 * 8 = 120 ). But the more I can get - the better.
-To simplify acquisition of test subjects I will create a testing framework in the form of a web-application (explained section \ref{implementation}) and release it through online media to be completed remotely.
+To simplify acquisition of test subjects I will create a testing environment in the form of a web-application (explained section \ref{implementation}) and spread it through online media to be completed remotely.
 Additional steps within the application will be taken to minimize risk of noise and false results that come from this type of testing. Part of the study will be conducted in a controlled environment on university grounds.
 
 \section{Implementation} \label{implementation}
 
-To facilitate the study I will build a web application (based on reactjs), runnable on desktop and tablet devices. Data emitted from the application will be saved in a remote database (mongodb) for the purposes of evaluation.
+To facilitate the study I will build a web-application (based on reactjs), runnable on desktop and tablet devices. Data emitted from the application will be saved in a remote database (mongodb) for the purposes of evaluation.
 
-Some open source software might be used and integrated into the system when applicable. E-learning tasks development is not an integral part of this thesis, although potential technological bases for integration of emotion information in e-learning systems will be discussed.
+Some open source software might be used and integrated into the system when applicable. E-learning tasks development is not an integral part of this thesis, although potential technological basis for integration of emotion information in e-learning systems will be discussed.
 
 No information should be stored locally on the device after finishing a session.
 
